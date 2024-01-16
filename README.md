@@ -10,7 +10,8 @@
 
 ¡Gracias por visitar! Espero que encuentres inspiración y diversión en cada clic. 🚀💡
 
-* Gracias a la pagina CODIGO WEB y su filosofia open source por compartir ideas que ayudan a nuevos programadores.
+* <a href="https://luiso-o.github.io/mi_portafolio/" target="_blank">Link para ver el proyecto con GitHub Pages 😊🔗</a>
 
+* Gracias a la pagina CODIGO WEB y su filosofia open source por compartir ideas que ayudan a nuevos programadores.
 * <a href = "https://www.youtube.com/watch?v=2s19KJq49rQ&t=220s">Cómo crear un PORTFOLIO WEB paso a paso - HTML - CSS - JS</a>
 * <a href="https://www.flaticon.es/" title="iconos flaticon">Flaticon</a>
