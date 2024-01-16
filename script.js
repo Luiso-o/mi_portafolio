@@ -1,4 +1,5 @@
 let menuVisible = false;
+
 //Función que oculta o muestra el menu
 function mostrarOcultarMenu(){
     if(menuVisible){
@@ -52,17 +53,15 @@ function enviarWhatsapp() {
     }
 
     var mensajeWhatsapp = "Hola, soy " + nombre + ". Mi número de teléfono es " + telefono + ". Mi mensaje es: " + mensaje;
-
     mensajeWhatsapp = encodeURIComponent(mensajeWhatsapp);
-
     var enlaceWhatsapp = "https://wa.me/34657626639?text=" + mensajeWhatsapp;
-
     window.open(enlaceWhatsapp);
 }
 
+/*funcion para actualizar el año automáticamente*/
 function actualizarAno() {
     var anoActual = new Date().getFullYear();
-    document.getElementById('derechos-autor').innerHTML = '\u00A9 ' + anoActual + ' Luis Trujillo. <a href="#">OpenSource.</a>';
+    document.getElementById('derechos-autor').innerHTML = '\u00A9 ' + anoActual + ' Luis Trujillo. <a href="https://github.com/Luiso-o/mi_portafolio/tree/main" target="_blank">OpenSource.</a>';
 }
 
 window.onload = actualizarAno;
