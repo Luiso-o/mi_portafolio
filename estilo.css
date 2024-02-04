@@ -442,7 +442,6 @@ html{
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
-    padding: 20px 0;
 }
 .contacto .fila{
     display: flex;
@@ -451,6 +450,7 @@ html{
     width: 50%;
     padding: 10px;
     position: relative;
+    border-radius: 30px;
 }
 .contacto .col input, .contacto .col textarea{
     display: block;
