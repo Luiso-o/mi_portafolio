@@ -11,11 +11,27 @@ function mostrarOcultarMenu(){
     }
 }
 
+
 function seleccionar(){
     //oculto el menu una vez que selecciono una opcion
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
+
+//funcion para la animacion del texto escrito a mano
+document.addEventListener('DOMContentLoaded', function () {
+    var text = document.getElementById('web-developer-text').innerHTML;
+    document.getElementById('web-developer-text').innerHTML = '';
+
+    var i = 0;
+    var interval = setInterval(function () {
+        document.getElementById('web-developer-text').innerHTML += text.charAt(i);
+        i++;
+        if (i > text.length) {
+            clearInterval(interval);
+        }
+    }, 200); 
+});
 
 //Funcion que aplica las animaciones de las habilidades
 function efectoHabilidades(){
@@ -41,27 +57,12 @@ window.onscroll = function(){
     efectoHabilidades();
 } 
 
-//funcion para chat por WathsApp
-function enviarWhatsapp() {
-    var nombre = document.getElementById("nombre").value;
-    var telefono = document.getElementById("telefono").value;
-    var mensaje = document.getElementById("mensaje").value;
-
-    if (!nombre || !telefono || !mensaje) {
-        alert("Por favor, completa todos los campos.");
-        return;
-    }
-
-    var mensajeWhatsapp = "Hola, soy " + nombre + ". Mi número de teléfono es " + telefono + ". Mi mensaje es: " + mensaje;
-    mensajeWhatsapp = encodeURIComponent(mensajeWhatsapp);
-    var enlaceWhatsapp = "https://wa.me/34657626639?text=" + mensajeWhatsapp;
-    window.open(enlaceWhatsapp);
-}
-
 /*funcion para actualizar el año automáticamente*/
 function actualizarAno() {
     var anoActual = new Date().getFullYear();
-    document.getElementById('derechos-autor').innerHTML = '\u00A9 ' + anoActual + ' Luis Trujillo. <a href="https://github.com/Luiso-o/mi_portafolio/tree/main" target="_blank">OpenSource.</a>';
+    var elemento = document.getElementById('derechos-autor');
+    elemento.innerHTML = '\u00A9 ' + anoActual + ' Luis Trujillo. <a href="https://github.com/Luiso-o/mi_portafolio/tree/main" target="_blank">OpenSource.</a>';
+    elemento.style.textAlign = 'center'; 
 }
 
 window.onload = actualizarAno;
