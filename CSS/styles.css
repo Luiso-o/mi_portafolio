@@ -24,58 +24,7 @@ html {
   color: inherit;
 }
 
-/* SECCION SOBRE MI */
-.sobremi {
-  background-color: var(--background1);
-  color: var(--white);
-  padding: 50px 20px;
-}
-.sobremi .contenido-seccion {
-  max-width: 1100px;
-  margin: auto;
-}
-.sobremi h2 {
-  font-size: 48px;
-  font-family: "Righteous";
-  text-align: center;
-  padding: 20px 0;
-}
-.sobremi .contenido-seccion p {
-  font: 18px;
-  line-height: 22px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.sobremi .contenido-seccion p span {
-  color: var(--main-color);
-  font-weight: bold;
-}
-.sobremi button {
-  cursor: pointer;
-  background-color: transparent;
-  border: 2px solid var(--white);
-  width: fit-content;
-  display: block;
-  margin: 20px auto;
-  padding: 10px 22px;
-  font-size: 16px;
-  color: var(--white);
-  position: relative;
-  z-index: 10;
-}
-.sobremi button .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: var(--main-color);
-  z-index: -1;
-  transition: 1s;
-}
-.sobremi button:hover .overlay {
-  width: 100%;
-}
+
 /* SECCION S K I L L S */
 .skills {
   background-color: var(--background2);
