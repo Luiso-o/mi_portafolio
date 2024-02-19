@@ -1,0 +1,240 @@
+:root {
+    --main-color: #40c8a4;
+    --background1: #1e2326;
+    --background2: #252a2e;
+    --white: #fff;
+  }
+
+/* SECCION SKILLS */
+.skills {
+    background-color: var(--background2);
+    color: var(--white);
+    padding: 50px 20px;
+  }
+  .skills .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+  }
+  .skills h2 {
+    font-size: 48px;
+    font-family: "Righteous";
+    text-align: center;
+    padding: 20px 0;
+  }
+  .skills .fila {
+    display: flex;
+  }
+  .skills .fila .col {
+    width: 50%;
+    padding: 0 20px;
+  }
+  .skills .fila .col h3 {
+    font-size: 28px;
+    font-family: "Righteous";
+    margin-bottom: 25px;
+  }
+  .skills .skill > span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .skills .skill .barra-skill {
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .skills .skill .progreso {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+  }
+  .skills .skill .barra-skill span {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+  }
+  
+  /* Estas clases se agregaran dinamicamente mediante javascript */
+  .skills .skill .java {
+    width: 0%;
+    animation: 2s java forwards;
+  }
+  @keyframes java {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 95%;
+    }
+  }
+  
+  .skills .skill .htmlcss {
+    width: 0%;
+    animation: 2s htmlcss forwards;
+  }
+  @keyframes htmlcss {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 85%;
+    }
+  }
+  
+  .skills .skill .javascript {
+    width: 0%;
+    animation: 2s javascript forwards;
+  }
+  @keyframes javascript {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 85%;
+    }
+  }
+  
+  .skills .skill .typescript {
+    width: 0%;
+    animation: 2s typescript forwards;
+  }
+  @keyframes typescript {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 75%;
+    }
+  }
+  
+  .skills .skill .python {
+    width: 0%;
+    animation: 2s python forwards;
+  }
+  @keyframes python {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 75%;
+    }
+  }
+  
+  .skills .skill .comunicacion {
+    width: 0%;
+    animation: 2s comunicacion forwards;
+  }
+  @keyframes comunicacion {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 95%;
+    }
+  }
+  
+  .skills .skill .trabajo {
+    width: 0%;
+    animation: 2s trabajo forwards;
+  }
+  @keyframes trabajo {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 95%;
+    }
+  }
+  
+  .skills .skill .creatividad {
+    width: 0%;
+    animation: 2s creatividad forwards;
+  }
+  @keyframes creatividad {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 95%;
+    }
+  }
+  
+  .skills .skill .dedicacion {
+    width: 0%;
+    animation: 2s dedicacion forwards;
+  }
+  @keyframes dedicacion {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 95%;
+    }
+  }
+  
+  .skills .skill .gestion {
+    width: 0%;
+    animation: 2s gestion forwards;
+  }
+  @keyframes gestion {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 95%;
+    }
+  }
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width: 700px) {
+  .skills h2 {
+    font-size: 32px; 
+    margin-bottom: 30px;
+  }
+
+  .skills .fila {
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+  }
+
+  .skills .fila .col {
+    width: 100%; 
+    padding: 0 10px; 
+  }
+
+  .skills .fila .col h3 {
+    font-size: 24px; 
+    margin-bottom: 15px; 
+  }
+
+  .skills .skill > span {
+    font-size: 16px; 
+  }
+
+  .skills .skill .barra-skill {
+    height: 8px; 
+    width: 100%; 
+    margin-bottom: 20px; 
+  }
+
+  .skills .skill .barra-skill span {
+    top: -20px; 
+    height: 25px;
+    width: 25px;
+    line-height: 25px; 
+    font-size: 12px; 
+  }
+}
+

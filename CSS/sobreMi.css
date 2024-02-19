@@ -27,11 +27,11 @@
     padding: 20px 0;
   }
   .sobremi .contenido-seccion p {
-    font: 18px;
-    line-height: 22px;
+    font-size: 18px; /* Corregido de 'font: 18px;' */
+    line-height: 1.6; /* Ajustado para mejorar la legibilidad */
     margin-bottom: 20px;
     text-align: center;
-  }
+}
 
 /* Estilo básico del botón */
 .btn-descarga {
@@ -92,4 +92,35 @@
   .btn-descarga:hover:after {
     transform: scaleX(1);
   }
+
+  /* SECCION RESPONSIVE */
+  @media screen and (max-width: 700px) {
+    .sobremi .contenido-seccion {
+      padding: 0 15px; 
+    }
   
+    .sobremi h2 {
+      font-size: 36px; 
+    }
+  
+    .sobremi .contenido-seccion p {
+      font-size: 16px; 
+    }
+  }
+  
+  /* SECCION RESPONSIVE */
+  @media screen and (max-width: 700px) {
+    .sobremi .fila, .curriculum .fila {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .sobremi .fila .col, .curriculum .fila .col {
+      width: 100%; 
+      margin-bottom: 20px; 
+    }
+  
+    .curriculum .fila .derecha {
+      margin-left: 0; 
+    }
+  }

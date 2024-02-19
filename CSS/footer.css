@@ -1,0 +1,80 @@
+:root {
+    --main-color: #40c8a4;
+    --background1: #1e2326;
+    --white: #fff;
+}
+
+/* SECCION FOOTER */
+footer {
+    background-color: var(--background1);
+    color: var(--white);
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+#derechos-autor {
+    text-align: center;
+}
+
+footer .redes {
+    margin-bottom: 20px;
+}
+
+footer .redes a {
+    text-align: center;
+    color: gray;
+    display: inline-block;
+    text-decoration: none;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+footer .arriba {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    color: var(--white);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
+}
+
+footer .arriba:hover {
+    transform: translateX(-50%) scale(1.1); 
+    box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+}
+
+footer .redes a:hover {
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 30px 0;
+    }
+
+    footer .redes a {
+        margin: 20px 5px;
+    }
+
+    footer .arriba {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+}
