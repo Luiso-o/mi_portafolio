@@ -6,11 +6,48 @@ function mostrarOcultarMenu() {
     navElement.classList.toggle("responsive");
 }
 
+//oculto el menu una vez que selecciono una opcion
 function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
+
+//Controla el desplazamiento en la pagina cuando presionas el menu
+function scrollToSmoothly(target, duration=400) {
+    var targetElement = document.querySelector(target);
+    if (!targetElement) return;
+
+    var targetPosition = targetElement.getBoundingClientRect().top;
+    var startPosition = window.pageYOffset;
+    var startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        var timeElapsed = currentTime - startTime;
+        var run = ease(timeElapsed, startPosition, targetPosition, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+
+// Añadir listener a los enlaces
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        var targetId = this.getAttribute("href");
+        scrollToSmoothly(targetId, 1000); // 1000ms = 1 segundo
+    });
+});
+
 
 //funcion para la animacion del texto escrito a mano
 document.addEventListener('DOMContentLoaded', function () {
@@ -55,7 +92,7 @@ window.onscroll = function(){
 function actualizarAno() {
     var anoActual = new Date().getFullYear();
     var elemento = document.getElementById('derechos-autor');
-    elemento.innerHTML = '\u00A9 ' + anoActual + ' Luis Trujillo. <a href="https://github.com/Luiso-o/mi_portafolio/tree/main" target="_blank">OpenSource.</a>';
+    elemento.innerHTML = '\u00A9 ' + anoActual + ' Luis Trujillo. <a href="https://github.com/Luiso-o/mi_portafolio/tree/main" target="_blank" rel="noopener noreferrer">OpenSource</a>';
     elemento.style.textAlign = 'center'; 
 }
 
