@@ -1,0 +1,128 @@
+ /* Variables globales */
+:root {
+ /* Colores */
+ --main-color: #40c8a4;
+ --background1: #1e2326;
+ --white: #fff;
+ 
+ /* Espaciado y dimensiones */
+ --header-max-width: 1100px;
+ --header-padding: 15px 20px;
+ --nav-margin: 0 15px;
+ --nav-padding: 3px;
+}
+
+/* MENU */
+.contenedor-header {
+    background: var(--background1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+  .contenedor-header header {
+    max-width: var(--header-max-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--header-padding);
+  }
+  
+  /*HELLO WORLD*/
+  .contenedor-header header .logo {
+    font-family: "Righteous";
+    font-size: 30px;
+    margin-left: 30px;
+    color: var(--main-color);
+    text-decoration: none;
+  }
+  .contenedor-header header ul {
+    display: flex;
+    list-style: none;
+  }
+  .contenedor-header header nav ul li a {
+    color: var(--white);
+    margin: var(--nav-margin);
+    padding: var(--nav-padding);
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 300ms ease, border-radius 300ms ease, box-shadow 300ms ease;
+  }
+  
+/*ANIMACIONES*/
+.contenedor-header header nav ul li a {
+  position: relative;
+  transition: color 300ms ease;
+  padding: 3px 15px;
+  margin: 0 5px;
+  z-index: 1;
+  overflow: hidden; 
+  color: var(--white); 
+}
+
+.contenedor-header header nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  z-index: -1;
+  transition: background-color 300ms ease, opacity 300ms ease, transform 300ms ease;
+  opacity: 0;
+  background-color: var(--main-color);
+  transform: scale(0.9); 
+}
+
+.contenedor-header header nav ul li a:hover::before,
+.contenedor-header header nav ul li a:focus::before {
+  opacity: 1;
+  transform: scale(1.05); 
+}
+
+.contenedor-header header nav ul li a:hover,
+.contenedor-header header nav ul li a:focus {
+  color: var(--white); 
+  text-shadow: 0px 0px 8px rgba(255,255,255,0.8); 
+}
+
+
+/*acordeon*/
+.nav-responsive {
+  color: var(--white);
+  width: 25px;
+  height: auto;
+  border-radius: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width: 700px) {
+  nav {
+    display: none;
+  }
+  .nav-responsive {
+    display: block;
+  }
+  nav.responsive {
+    display: block;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 75px;
+    background-color: var(--background2);
+    width: 140px;
+  }
+  nav.responsive ul {
+    display: block !important;
+  }
+  nav.responsive ul li {
+    border-bottom: 1px solid var(--white);
+    padding: 10px 0;
+  }
+}
