@@ -51,7 +51,7 @@
     transition: background-color 300ms ease, border-radius 300ms ease, box-shadow 300ms ease;
   }
   
-/*ANIMACIONES*/
+/*ANIMACIONES MENU*/
 .contenedor-header header nav ul li a {
   position: relative;
   transition: color 300ms ease;
@@ -86,9 +86,8 @@
 .contenedor-header header nav ul li a:hover,
 .contenedor-header header nav ul li a:focus {
   color: var(--white); 
-  text-shadow: 0px 0px 8px rgba(255,255,255,0.8); 
+  text-shadow: 0px 0px 8px rgba(59, 57, 57, 0.8); 
 }
-
 
 /*acordeon*/
 .nav-responsive {
