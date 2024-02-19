@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap");
-:root {
-  --main-color: #40c8a4;
-  --background1: #1e2326;
-  --background2: #252a2e;
-  --white: #fff;
-}
 
 * {
   box-sizing: border-box;
@@ -13,8 +7,3 @@
   padding: 0;
 }
 
-/*estilos de enlaces*/
-.enlace {
-  text-decoration: none;
-  color: inherit;
-}
