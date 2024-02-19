@@ -40,12 +40,11 @@ function scrollToSmoothly(target, duration=400) {
 }
 
 // Añadir listener a los enlaces
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+document.addEventListener('click', function(e) {
+    if (e.target.matches('a[href^="#"]')) {
         e.preventDefault();
-        var targetId = this.getAttribute("href");
-        scrollToSmoothly(targetId, 1000); // 1000ms = 1 segundo
-    });
+        scrollToSmoothly(e.target.getAttribute('href'), 1000);
+    }
 });
 
 
